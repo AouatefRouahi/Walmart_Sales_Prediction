@@ -265,13 +265,6 @@ def my_heatmap(dataset, title):
         if fig.layout.annotations[i].text == 'nan':
             fig.layout.annotations[i].text = ""
 
-    # Export to a png image
-    fig.to_image(format="png", engine="kaleido")
-    if os.path.exists("images/"+title+".png"):
-        os.remove("images/"+title+".png")
-
-    fig.write_image("images/"+title+".png")
-
     return fig  
 
 # ********************************************************Enumeration ************************************************
